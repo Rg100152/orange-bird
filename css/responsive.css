@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Orange Bird — responsive.css
+   Breakpoints: 1100px / 900px / 700px / 600px / 420px
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .shell { grid-template-columns: 205px minmax(0, 1fr) 270px; gap: 15px; }
+  .masonry { column-count: 3; }
+  .post-actions { gap: 22px; }
+  .landing-hero { gap: 28px; }
+  .lightbox-inner { grid-template-columns: minmax(0, 1fr) 270px; }
+}
+
+@media (max-width: 1000px) {
+  .shell { grid-template-columns: 205px minmax(0, 1fr); }
+  .right-sidebar { display: none; }
+  .gallery-grid.cols-4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* --------------------------- tablet / mobile shell --------------------------- */
+@media (max-width: 900px) {
+  .mobile-toggle { display: inline-flex; }
+
+  .topbar-inner { gap: 9px; min-height: 52px; padding: 0 11px; }
+  .top-nav .icon-link { width: 33px; height: 33px; }
+  .top-nav .icon-link.active::after { bottom: -8px; }
+  .top-nav .nav-avatar { display: none; }
+  .top-nav .hide-sm { display: none; }
+
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 13px 12px 30px;
+    gap: 0;
+  }
+
+  .left-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 90;
+    width: 274px;
+    max-height: none;
+    height: 100vh;
+    padding: 16px 12px 30px;
+    background: #fff;
+    border-right: 1px solid var(--border);
+    transform: translateX(-102%);
+    transition: transform 0.22s ease;
+    overflow-y: auto;
+  }
+  body.mobile-open .left-sidebar { transform: translateX(0); }
+  .left-sidebar .side-profile { margin-top: 4px; }
+  .left-sidebar .side-compose .btn { width: 100%; }
+  .left-sidebar .side-mini-links { display: none; }
+
+  .mobile-bottom-nav { display: flex; }
+  .site-footer { padding-bottom: 54px; }
+  .toast { bottom: 76px; }
+
+  .top-search { max-width: none; }
+  .brand-text { display: none; }
+  .brand img { width: 32px; height: 32px; }
+
+  .public-main { padding: 24px 14px 50px; }
+  .landing-hero { grid-template-columns: 1fr; gap: 26px; padding-top: 6px; }
+  .landing-copy { text-align: left; }
+  .landing-copy .lead { max-width: none; }
+  .landing-visual { max-width: 520px; width: 100%; margin: 0 auto; }
+  .collage { grid-template-rows: 130px 130px; }
+  .landing-sticker { right: 0; bottom: -16px; }
+
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-banner { min-height: 200px; padding: 20px; }
+
+  .settings-layout { grid-template-columns: 1fr; }
+  .settings-nav { position: static; display: flex; overflow-x: auto; }
+  .settings-nav a { border-left: 0; border-bottom: 3px solid transparent; white-space: nowrap; }
+  .settings-nav a.active { border-left: 0; border-bottom-color: var(--primary); }
+
+  .post-media img { max-height: 470px; }
+
+  .lightbox { padding: 12px; }
+  .lightbox-inner { grid-template-columns: 1fr; max-height: none; }
+  .lightbox-stage { max-height: 62vh; }
+  .lightbox-stage img { max-height: 62vh; }
+  .lightbox-side { max-height: none; }
+  .lightbox-close { top: 10px; right: 10px; }
+}
+
+/* --------------------------- phones --------------------------- */
+@media (max-width: 700px) {
+  h1 { font-size: 25px; }
+  h2 { font-size: 19px; }
+
+  .masonry { column-count: 2; }
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px; }
+  .gallery-grid.cols-4, .gallery-grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .landing-hero { padding-bottom: 20px; }
+  .landing-copy h1 { font-size: clamp(31px, 9vw, 44px); }
+  .landing-copy .lead { font-size: 15px; }
+  .collage { grid-template-rows: 112px 112px; gap: 7px; }
+  .landing-proof { margin-top: 18px; }
+
+  .feature-grid { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: 1fr; }
+  .service-stat-row { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .service-stat { padding: 8px; }
+  .service-stat b { font-size: 15px; }
+  .service-stat span { font-size: 10px; }
+
+  .panel-head { padding: 11px 13px; }
+  .post-card { padding: 11px 12px; gap: 9px; }
+  .post-card .avatar { width: 40px; height: 40px; }
+  .post-text { font-size: 13px; }
+  .post-actions { gap: 18px; }
+  .post-media img { max-height: 400px; }
+
+  .composer-card { padding: 11px 12px; gap: 9px; }
+  .composer-card .avatar { width: 40px; height: 40px; }
+  .composer-fake { font-size: 15px; }
+
+  .tabs .tab { padding: 10px 12px; font-size: 12px; }
+  .tabs.pills .tab { padding: 6px 11px; }
+
+  .messages-shell { grid-template-columns: 1fr; min-height: 0; }
+  .conv-list { border-right: 0; border-bottom: 1px solid var(--border); max-height: 190px; }
+  .chat-body { min-height: 300px; max-height: 420px; }
+  .bubble { max-width: 84%; }
+
+  .profile-banner { height: 150px; }
+  .profile-header .avatar-xl { width: 96px; height: 96px; margin-top: -48px; }
+  .profile-id h1 { font-size: 19px; }
+  .profile-header { padding: 0 13px 13px; }
+  .media-subhead { padding: 10px 13px; }
+
+  .settings-section { padding: 13px; }
+  .setting-row { align-items: flex-start; }
+  .setting-row .btn { flex-shrink: 0; }
+
+  .form-row, .form-row.three { grid-template-columns: 1fr; }
+  .auth-card { padding: 22px 18px; }
+  .auth-main { padding: 28px 13px 52px; }
+  .auth-brand img { width: 64px; height: 48px; }
+
+  .landing-cta .btn { flex: 1; }
+  .landing-proof { font-size: 11px; }
+  .section-head { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .cta-band { padding: 20px; }
+  .cta-band h2 { font-size: 20px; }
+
+  .user-row { padding: 11px 12px; }
+  .user-row .avatar { width: 40px; height: 40px; }
+  .follow-row { padding: 9px 12px; }
+  .trend { padding: 8px 12px; }
+
+  .top-nav .hide-xs { display: none; }
+  .top-search { display: none; }
+  .top-nav { margin-left: auto; }
+  .topbar-inner { justify-content: space-between; }
+  .top-actions { gap: 6px; }
+  .top-links { display: none; }
+  .top-actions .btn { padding: 7px 12px; font-size: 12px; }
+
+  .footer-inner { flex-direction: column; align-items: flex-start; padding: 15px 13px; }
+  .footer-links { gap: 5px 13px; }
+
+  .lightbox-inner { border-radius: 8px; }
+  .lightbox-nav { width: 34px; height: 34px; }
+  .lightbox-side { padding: 13px; }
+  .lightbox-side h2 { font-size: 16px; }
+
+  .page-hero { margin-bottom: 22px; }
+  .page-hero p { font-size: 13px; }
+
+  .settings-nav a { padding: 8px 10px; font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-grid.cols-4, .gallery-grid.cols-3, .gallery-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .post-actions { gap: 14px; }
+  .post-action { font-size: 11px; }
+  .post-action svg { width: 15px; height: 15px; }
+  .post-menu { display: none; }
+
+  .top-nav .icon-link { width: 31px; height: 31px; }
+  .top-nav .hide-xs-2 { display: none; }
+
+  .collage { grid-template-rows: 96px 96px; }
+  .landing-sticker { font-size: 11px; padding: 8px 10px; }
+
+  .error-code { font-size: 82px; }
+  .error-search { flex-direction: column; }
+  .error-search .btn { width: 100%; }
+
+  .service-hero { min-height: 190px; padding: 18px; }
+  .service-stat-row { grid-template-columns: 1fr 1fr 1fr; }
+  .service-stat span { line-height: 1.2; }
+
+  .composer-tools .icon-btn:nth-child(n+4) { display: none; }
+  .pick-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .tabs .tab { padding: 9px 10px; font-size: 11px; }
+  .avatar-xl { width: 88px; height: 88px; }
+  .profile-banner { height: 126px; }
+  .profile-header .avatar-xl { width: 84px; height: 84px; margin-top: -42px; }
+
+  .chat-body { max-height: 340px; }
+  .toolbar { padding: 9px 12px; }
+  .panel-body { padding: 13px; }
+}
