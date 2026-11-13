@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FF7A00">
+  <meta name="description" content="Log in to Orange Bird to see your feed, bookmarks, messages and the artwork you follow.">
+  <title>Log in / Orange Bird</title>
+  <link rel="icon" href="assets/logo orange bird.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="public-body" data-page="login">
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo orange bird.png" alt="Orange Bird logo">
+      <span class="brand-text">Orange <em>Bird</em></span>
+    </a>
+    <nav class="top-links" aria-label="Site navigation">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="top-actions">
+      <a class="btn btn-ghost btn-sm" href="login.html">Log in</a>
+      <a class="btn btn-primary btn-sm" href="signup.html">Join</a>
+    </div>
+  </div>
+</header>
+  <main id="main" class="auth-main">
+
+<div class="auth-card">
+  <div class="auth-brand">
+    <img src="assets/logo orange bird.png" alt="Orange Bird logo">
+    <h1>Welcome back</h1>
+    <p>Sign in to your Orange Bird nest.</p>
+  </div>
+  <form class="form" data-auth="login" novalidate>
+    <div class="field">
+      <label for="email">Email address</label>
+      <input class="input" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+      <div class="form-error"></div>
+    </div>
+    <div class="field">
+      <label for="password" style="display:flex;align-items:center;justify-content:space-between">Password
+        <button class="icon-btn" type="button" data-toggle-password="password" aria-label="Show password" style="font-size:11px;width:auto;height:auto;padding:0 4px;color:var(--blue);font-weight:700">Show</button>
+      </label>
+      <input class="input" id="password" name="password" type="password" placeholder="At least 6 characters" autocomplete="current-password">
+      <div class="form-error"></div>
+    </div>
+    <div class="flex-between">
+      <label class="check-row"><input type="checkbox" name="remember" checked> Remember me</label>
+      <a class="small" href="help.html">Forgot password?</a>
+    </div>
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Sign in</button>
+  </form>
+  <div class="note warm mt-12">Demo only — any valid email and a password of 6+ characters will sign you in. Nothing is stored or sent.</div>
+  <div class="auth-alt">New to Orange Bird? <a href="signup.html">Create an account</a></div>
+  <div class="auth-legal">By signing in you agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</div>
+</div>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="assets/logo orange bird.png" alt="">Orange Bird</div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="help.html">Help</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="404.html">404</a>
+    </nav>
+    <div>&copy; <span data-year>2026</span> Orange Bird · Create. Share. Fly.</div>
+  </div>
+</footer>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/feed.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>
