@@ -13,7 +13,7 @@ From this folder:
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000/index.html>.
+Then open <https://rg100152.github.io/orange-bird/>.
 
 You can also open `index.html` directly in a browser, though the lightbox and some
 session features behave best when served over HTTP.
